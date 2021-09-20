@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: developershub-user-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: developers-user-service
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: developers-user-service
+    spec:
+      containers:
+        - name: developers-user-service
+          image: steven8519/developers-user-service:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
