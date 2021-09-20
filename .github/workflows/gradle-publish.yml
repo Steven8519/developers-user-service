@@ -46,9 +46,8 @@ jobs:
         aws-region: us-east-2
 
     - name: Trigger deploy
-      uses: Consensys/kubernetes-action@master
-      env:
-        KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+      uses: danielr1996/kubectl-action@1.0.0
       with:
-        args: apply deployment.yml
+        kubeconfig: ${{ secrets.KUBE_CONFIG }}
+        args: apply -f deployment.yaml
 
