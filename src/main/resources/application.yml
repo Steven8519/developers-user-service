@@ -1,0 +1,12 @@
+app:
+  datasource:
+    jdbc-url: jdbc:postgresql://localhost:5432/usersdb
+    username: postgres
+    password: password
+    pool-size: 30
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+
