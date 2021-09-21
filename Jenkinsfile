@@ -14,7 +14,7 @@ pipeline {
       }
     }
 
-    stage('Maven Build') {
+    stage('Gradle Build') {
         steps{
            script {
               sh "gradlew clean build"
@@ -22,7 +22,7 @@ pipeline {
         }
     }
 
-    stage('Maven Test') {
+    stage('Gradle Test') {
         steps{
            script {
              sh "gradlew clean test"
