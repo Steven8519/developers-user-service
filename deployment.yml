@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: developers-user-service
-          image: steven8519/developers-user-service:latest
+          image: steven8519/developers-user-service
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
