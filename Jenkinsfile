@@ -21,7 +21,6 @@ pipeline {
             }
         }
     }
-
     stage('Gradle Test') {
         steps{
            script {
