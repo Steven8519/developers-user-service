@@ -17,7 +17,7 @@ pipeline {
     stage('Gradle Build') {
         steps{
            script {
-              sh "gradlew clean build"
+              sh "./gradlew clean build"
             }
         }
     }
@@ -25,7 +25,7 @@ pipeline {
     stage('Gradle Test') {
         steps{
            script {
-             sh "gradlew clean test"
+             sh "./gradlew clean test"
             }
          }
     }
