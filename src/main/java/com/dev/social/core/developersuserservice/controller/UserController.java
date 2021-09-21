@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.security.Principal;
 
 @RestController
-@RequestMapping("/api/1.0/user")
+@RequestMapping("/api/1.0/users")
 public class UserController {
 
     @Autowired
